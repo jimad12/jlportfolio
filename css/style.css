@@ -1,0 +1,68 @@
+html, body {
+      
+        padding-top: 60px;
+        padding-bottom: 40px;
+        
+        height: 100%;
+        
+}
+      
+ #shopData {
+       text-align: center;
+       font-family: monospace;
+        font-size: 20px;
+ }
+ 
+ .span8{
+   text-align: center;
+   font-family: monospace, cursive;
+   font-size: 20px;
+ }
+ .span4{
+   font-family: monospace;
+ }
+ .centerMe{
+   text-align: center;
+   font-family: monospace, cursive;
+ }
+ 
+/* news Sticker*/
+.headerTicker{
+  height: 90px;
+  background-color: #0174cd;
+}
+.headerTicker h1 {
+  margin: 0 50px 0 50px;
+  padding: 0;
+  line-height: 100px;
+  font-size: 40px;
+  color: #FFFFFF;
+}
+.content-frame {
+  margin: -30px 50px 0 50px;
+  background-color: lightsalmon;
+  border-radius: 10px;
+  height: 60px;
+  width: 350px;
+  position: relative;
+  padding: 0 20px 0 20px;
+  overflow: hidden;
+  text-align: center;
+  float: right;
+}
+.content-frame ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+}
+.content-frame ul li {
+  line-height: 50px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: olive;
+  text-align: center;
+}
+

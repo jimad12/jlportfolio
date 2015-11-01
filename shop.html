@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html ng-app="shop">
+  <head>
+    <meta charset="utf-8">
+    <title>Products | AngularJS Data Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap-custom.css" rel="stylesheet">
+      <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
+    
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+      
+  
+  </head>
+
+  <body ng-controller="shopCtrl">
+  
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">James Lemaire</a>
+            
+          <div class="nav-collapse">
+            
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+               <li class="active"><a href="shop.html">Shop</a></li>
+               <li><a href="blog.html">Blog</a></li>
+            </ul>
+            
+            <ul class="nav pull-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Your Account <b class="caret"></b></a>
+                
+                <ul class="dropdown-menu">
+                  <li><a href="login.html">Login</a></li>
+                </ul>
+              
+              </li>
+            </ul>
+            
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+   
+   <div id="shopData">
+     <h3>Angularjs Data Shop</h3>
+     
+     <p >
+       A simple AngularJS shop set up
+       as a Single Page Applicatiion with minimum coding footprint.</p>
+        
+   </div>
+   
+<br><br>
+<!-- Products listing here-->
+
+    <div class="navbar-inverse">
+      <p><a class="navbar-brand" href="#">AngularJS Data Shop</a></p>
+    </div>
+    
+    
+    <div class="panel panel-default row"  
+    style="margin-left: 70px; margin-right: 50px" ng-controller="productListCtrl">
+      
+        
+        <div class="col-xs-3">
+             <a ng-click="selectCategory()" class="btn btn-default ">Shop</a>
+            
+            <a ng-repeat="item in data.products | orderBy:'Category' | unique:'Category'"
+               ng-click="selectCategory(item)" class="btn  btn-default"
+               ng-class="getCategoryClass(item)">
+                {{item}}
+            </a>
+        </div>
+        
+        
+   <div class="col-xs-8">
+     
+ <div class="well" 
+ ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:pageSize">
+   <h3>
+     <strong>{{item.name}}</strong>
+     <span class="pull-right label label-primary">
+       {{item.price | currency}}
+     </span></h3>
+ <span class="lead">{{item.description}}</span>
+  </div>
+  
+  <div class="pull-right btn-group">
+      <a ng-repeat=
+        "page in data.products | filter:categoryFilterFn | pageCount:pageSize"
+         ng-click="selectPage($index + 1)" class="btn btn-default"
+         ng-class="getPageClass($index + 1)">
+         {{$index + 1}}
+        </a>
+</div>
+</div>
+</div><!-- panel-default-->
+    
+
+      <br><br>
+    
+      <div id="footer">
+        <p>&copy; James Lemaire 2015</p>
+      </div>
+    
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+     <script src="angularShop/lib/angular.js"></script>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/bootstrap-custom.min.js"></script>
+   
+   <script src="angularShop/modules/shop.js"></script>  
+     <script src="angularShop/controllers/shopCtrl.js"></script>
+     <script src="angularShop/filters/customFilters.js"></script>
+     <script src="angularShop/controllers/productListControllers.js"></script>
+       
+       <script>
+         //location.reload();
+         // location.reload(false);
+       </script>
+       
+
+  </body>
+</html>

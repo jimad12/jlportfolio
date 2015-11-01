@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>About | James Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+     <link href="css/rssReader.css" media="screen" rel="stylesheet">
+     <link href="css/Anim-Bg-Img.css" media="screen" rel="stylesheet">
+    
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+    
+    <div class="background"> </div>
+       <div class="text-frame">
+         
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">James Lemaire</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li class="active"><a href="blog.html">Blog</a></li>
+            </ul>
+            <ul class="nav pull-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Your Account <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                 <li><a href="login.html">Login</a></li>
+                  
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+<!-- blog begins -->
+<br><br>
+      <div class="page-header">
+        
+        <h1 id="showData" style="color:lightblue;">Tweets and Tech News</h1>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+		  
+        <div class="span8">
+          <img src="img/pic1.jpg" />
+          <h2 style="color:charcol;">Hear it from me</h2>
+          
+          <a class="twitter-timeline" data-chrome="noheader nofooter noborders noscrollbar" 
+          data-dnt="true" href="https://twitter.com/jimad12"  
+          data-tweet-limit ="3"
+          data-widget-id="642109207727226880" width="550" height="400">Tweets by @jimad12</a>
+            <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+            if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js,fjs);
+            }}(document,"script","twitter-wjs");</script>
+          
+          
+          <p style="color:white;">Watch this twitter feed to stay update on recent projects and technologies.</p>
+          <p style="color:white;">I use my twitter as a blog it's easy to integrate and get the word out efficiently.</p>
+        </div>
+		
+        <div class="span4">
+          <img src="img/pic3.png" />
+          
+         <h3 style="color:lightgray;">Technology News</h3>
+        <div class="myRSSContent"></div>
+          <br>
+            
+        </div>
+		
+      </div>
+
+      <hr>
+        
+
+      <footer id="footer">
+        <p>&copy; James Lemaire 2015</p>
+      </footer>
+
+    </div> <!-- /container -->
+       </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-custom.min.js"></script>
+      
+   <script src="https://www.google.com/jsapi"></script>
+	
+  <script>
+  google.load("feeds", "1");
+  </script>
+               
+	<script src="js/jquery.rssreader.js"></script>
+	<script src="js/rssFeeds.js"></script>
+   <script src="js/Anim-Bg-Img.js"></script>
+
+  </body>
+</html>
